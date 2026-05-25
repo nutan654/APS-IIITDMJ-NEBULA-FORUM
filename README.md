@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ✦ NEBULA Astronomy & Physics Society ✦
 > **The Ornate Digital Sanctuary of the Nebula Astronomy & Physics Society at IIITDM Jabalpur**
 > *"Per aspera ad astra" — Through hardship to the stars*
@@ -164,3 +165,7 @@ Use these credentials to log in and test different clearance levels manually (al
 3. **Rohan Mishra (Apprentice Novice)**: `rohan@nebula.aps`
 
 *Tip: You can bypass typing credentials entirely by selecting the golden **Quick Fellowship Entrance** shortcuts on the Commune (Login) page!*
+=======
+# APS-IIITDMJ-NEBULA-FORUM
+Next.js 14 portal for the IIITDMJ NEBULA Astronomy Society featuring JWT role auth, live eyepiece simulators, celestial observation logbooks, weather seeing forecasts, equipment booking, automated Scholar exams, and an interactive HTML5 constellation canvas. ✦ “Per aspera ad astra.”
+>>>>>>> 9b1eb023b92cd0df39e0e998cc0d4a4b96bd4df9
