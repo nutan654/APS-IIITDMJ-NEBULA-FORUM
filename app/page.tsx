@@ -1402,7 +1402,7 @@ export default function Home() {
             <div className="ornate-card" style={{ width: "100%", maxWidth: "680px", textAlign: "center" }}>
               <div className="corner-tl"></div><div className="corner-tr"></div><div className="corner-bl"></div><div className="corner-br"></div>
               <h3 style={{ fontFamily: "Cinzel, serif", color: "var(--gold-bright)", letterSpacing: "0.2em", fontSize: "1.1rem" }}>✦ THE COUNCIL CHALLENGE ✦</h3>
-              <p style={{ fontFamily: "Spectral, serif", margin: "1rem 0", fontSize: "0.95rem", lineSize: "1.8", color: "var(--parchment)" }}>
+             <p style={{ fontFamily: "Spectral, serif", margin: "1rem 0", fontSize: "0.95rem", lineHeight: "1.8", color: "var(--parchment)" }}>
                 Apprentices and novices are challenged to verify their cosmological calculations before the Council of Stars. Answer 5 strict coordinates correctly to dynamically elevate your fellowship rank to <strong>SCHOLAR</strong> on the spot!
               </p>
               
