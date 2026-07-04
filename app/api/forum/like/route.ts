@@ -1,11 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/db";
+import { forumPosts } from "@/lib/db";
 import { getAuthenticatedUser } from "@/lib/auth";
 
 export async function POST(req: NextRequest) {
   try {
-    const user = await getAuthenticatedUser(req);
-
+    const user = getAuthenticatedUser(req);
     if (!user) {
       return NextResponse.json(
         { error: "You must be logged in to appreciate a starry whisper." },
@@ -14,7 +13,6 @@ export async function POST(req: NextRequest) {
     }
 
     const { postId } = await req.json();
-
     if (!postId) {
       return NextResponse.json(
         { error: "Post ID is required to record resonance." },
@@ -22,10 +20,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const post = await prisma.forumPost.findUnique({
-      where: { id: Number(postId) },
-    });
-
+    const post = forumPosts.find((p) => p.id === Number(postId));
     if (!post) {
       return NextResponse.json(
         { error: "This whisper has faded from the stellar coordinates." },
@@ -33,18 +28,11 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const updatedPost = await prisma.forumPost.update({
-      where: { id: post.id },
-      data: {
-        likes: {
-          increment: 1,
-        },
-      },
-    });
+    post.likes += 1;
 
     return NextResponse.json({
       message: "Resonance registered with the stars.",
-      likes: updatedPost.likes,
+      likes: post.likes,
     });
   } catch (error: any) {
     console.error("❌ Like post error:", error);
