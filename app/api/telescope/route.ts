@@ -1,28 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "@/lib/db";
+import { telescopeBookings, incrementBookingId } from "@/lib/db";
 import { getAuthenticatedUser } from "@/lib/auth";
 
-// GET all active telescope bookings
 export async function GET(req: NextRequest) {
   try {
-    const bookings = await prisma.telescopeBooking.findMany({
-      include: {
-        user: {
-          select: {
-            name: true,
-            title: true,
-          },
-        },
-      },
-      orderBy: [
-        { date: "asc" },
-        { timeSlot: "asc" },
-      ],
+    const sorted = [...telescopeBookings].sort((a, b) => {
+      if (a.date !== b.date) return a.date.localeCompare(b.date);
+      return a.timeSlot.localeCompare(b.timeSlot);
     });
 
-    const formattedBookings = bookings.map((b) => ({
+    const formattedBookings = sorted.map((b) => ({
       id: b.id,
-      name: b.user.name,
+      name: b.userName,
       instrument: b.instrument,
       date: b.date,
       timeSlot: b.timeSlot,
@@ -40,11 +29,9 @@ export async function GET(req: NextRequest) {
   }
 }
 
-// POST: Book a new telescope slot with full clash detection
 export async function POST(req: NextRequest) {
   try {
-    const user = await getAuthenticatedUser(req);
-
+    const user = getAuthenticatedUser(req);
     if (!user) {
       return NextResponse.json(
         { error: "You must reside within the fellowship to book telescopes." },
@@ -53,7 +40,6 @@ export async function POST(req: NextRequest) {
     }
 
     const { instrument, date, timeSlot, purpose } = await req.json();
-
     if (!instrument || !date || !timeSlot || !purpose) {
       return NextResponse.json(
         { error: "Missing parameters: instrument, date, slot, or observation purpose." },
@@ -61,15 +47,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Clash detection: Is this specific instrument already booked at this date + timeslot?
-    const existingConflict = await prisma.telescopeBooking.findFirst({
-      where: {
-        instrument,
-        date,
-        timeSlot,
-        status: "APPROVED",
-      },
-    });
+    const existingConflict = telescopeBookings.find(
+      (b) =>
+        b.instrument === instrument &&
+        b.date === date &&
+        b.timeSlot === timeSlot &&
+        b.status === "APPROVED"
+    );
 
     if (existingConflict) {
       return NextResponse.json(
@@ -78,21 +62,22 @@ export async function POST(req: NextRequest) {
             existingConflict.userId === user.id ? "yourself" : "another astronomer"
           }.`,
         },
-        { status: 409 } // Conflict
+        { status: 409 }
       );
     }
 
-    // Create the booking
-    const newBooking = await prisma.telescopeBooking.create({
-      data: {
-        userId: user.id,
-        instrument,
-        date,
-        timeSlot,
-        purpose,
-        status: "APPROVED",
-      },
-    });
+    const newBooking = {
+      id: incrementBookingId(),
+      userId: user.id,
+      userName: user.name,
+      instrument,
+      date,
+      timeSlot,
+      purpose,
+      status: "APPROVED",
+    };
+
+    telescopeBookings.push(newBooking);
 
     return NextResponse.json(
       {
