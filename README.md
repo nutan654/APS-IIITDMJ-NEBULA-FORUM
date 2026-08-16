@@ -1,312 +1,424 @@
-<div align="center">
+# NEBULA Astronomy & Physics Society
 
-# ✦ NEBULA Astronomy & Physics Society ✦
+A full-stack astronomy platform for the Astronomy & Physics Society of IIITDM Jabalpur, combining interactive telescope simulations, observation management, astronomy utilities, role-based member systems, equipment reservations, and an AI-powered astronomy assistant.
 
-### *The Digital Celestial Sanctuary of IIITDM Jabalpur*
+## Overview
 
-<img src="https://readme-typing-svg.demolab.com?font=Cinzel&size=26&duration=3000&pause=1000&color=C9A227&center=true&vCenter=true&width=900&lines=Per+Aspera+Ad+Astra+✦;A+Premium+Astronomy+%26+Physics+Platform;Built+with+Next.js+14+and+TypeScript;Where+Code+Meets+the+Cosmos" />
+NEBULA is designed as a digital platform for astronomy clubs and observatory communities.
 
-<br/>
+The application brings together:
 
-> *“Per aspera ad astra” — Through hardship to the stars*
+* Interactive telescope and eyepiece simulations
+* Celestial observation logging
+* Astrophotography archiving
+* Astronomy-focused weather and seeing analysis
+* Role-based scholar progression
+* Observatory equipment reservations
+* AI-assisted astronomy guidance
+* Interactive constellation visualization
+* Secure authentication and protected API routes
 
-[![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=nextdotjs)]()
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)]()
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)]()
-[![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma)]()
-[![JWT](https://img.shields.io/badge/JWT-Authentication-gold?style=for-the-badge)]()
+The project uses a modern Next.js architecture with server/client component separation and a custom lightweight relational state layer.
 
-</div>
+## Core Features
 
----
+### Interactive Eyepiece Simulator
 
-# 🌌 Overview
+A browser-based telescope optics simulator that models how celestial objects appear under different observing configurations.
 
-NEBULA is a premium, high-fidelity astronomy and physics platform engineered for the **Astronomy & Physics Society of IIITDM Jabalpur**.  
-Designed with a blend of celestial aesthetics and modern backend engineering, the platform creates an immersive digital ecosystem for astronomy enthusiasts, astrophotographers, researchers, and observatory scholars.
+The simulator supports:
 
-It combines:
-- immersive cosmic visuals
-- real-time astronomy utilities
-- role-based scholar systems
-- interactive optical simulations
-- observatory management infrastructure
-- modern full-stack architecture
+* Eyepiece focal-length changes
+* Magnification calculations
+* Barlow lens configurations
+* Dynamic field-of-view boundaries
+* Planetary observation rendering
+* Multiple celestial targets
 
-into one unified astronomical experience.
+Supported targets include Saturn, Jupiter's Galilean moons, the Orion Nebula, and lunar craters.
 
----
+### Celestial Observation Logbook
 
-# ✦ Core Features
+A CRUD-based observation ledger for recording:
 
-## 🔭 Interactive Eyepiece Simulator Laboratory
+* Celestial objects
+* Telescope configuration
+* Eyepiece selection
+* Atmospheric conditions
+* Observation notes
+* Deep-sky observations
 
-A real-time telescope optics simulator allowing users to visualize celestial objects through different eyepiece focal lengths.
+Observation entries are integrated into the platform's astronomy activity feed.
 
-### Includes:
-- realistic magnification calculations
-- focal length simulations
-- dynamic viewing boundaries
-- planetary observation rendering
-- Barlow lens support
+### Astrophotography Archive
 
-Supported objects include:
-- Saturn & Rings
-- Orion Nebula
-- Lunar Craters
-- Jupiter’s Galilean Moons
+A structured gallery for preserving astronomical imaging records alongside technical metadata such as:
 
----
-
-## 📖 Celestial Observation Logbook
-
-A full CRUD-based astronomy observation ledger where users can document:
-
-- observed celestial objects
-- atmospheric conditions
-- telescope configurations
-- eyepiece selections
-- deep-sky observation notes
-
-Entries dynamically sync into the shared astronomy activity feed.
-
----
-
-## 🌠 Astrophotography Archive
-
-A premium masonry-style astrophotography gallery preserving:
-- exposure metadata
-- ISO configurations
-- telescope instrumentation
-- long exposure details
-- observatory records
-
-Designed for showcasing deep-space imaging captured from the observatory.
-
----
-
-## ☁️ Astro Weather Seeing Predictor
-
-A custom astronomy weather engine generating observation-quality forecasts using:
-- cloud cover simulation
-- atmospheric clarity
-- lunar glow interference
-- sky scintillation indexes
-
-Provides automated astronomy recommendations such as:
-
-> *“Optimal for deep-space photography”*  
-> *“Restrict observations to planetary targets due to lunar interference”*
-
----
-
-## 🧠 Council Challenge Examination System
-
-An astronomy-based qualification system where novice members complete advanced astronomy assessments to unlock elevated ranks.
-
-### Dynamic Scholar Roles
-- NOVICE
-- SCHOLAR
-- HIGH_PRIEST
-
-Promotion occurs automatically upon successful examination completion.
-
----
-
-## 🤖 Galileo AI Celestial Companion
-
-An interactive astronomy assistant inspired by Galileo Galilei.
-
-Capable of responding to:
-- astrophysics queries
-- orbital mechanics
-- relativity concepts
-- observatory schedules
-- astronomy guidance
-
-Presented through an immersive ancient-scroll inspired interface.
-
----
-
-## 📅 Observatory Equipment Reservation System
-
-A dedicated equipment scheduling platform enabling:
-- telescope slot reservations
-- observatory scheduling
-- equipment management
-- research session coordination
-
-Supports multiple telescope configurations and reservation tracking.
-
----
-
-# 🎨 Premium Design System
-
-NEBULA was architected with an emphasis on cinematic visual identity and immersive cosmic ambience.
-
-## ✨ Design Highlights
-
-- Animated HTML5 Canvas starfield
-- Dynamic constellation linking system
-- Glassmorphism celestial panels
-- Ornate gold-accented interfaces
-- Responsive astronomical layouts
-- Premium typography using Cinzel & Spectral
-- Atmospheric cosmic gradients
-- Interactive motion effects
-
----
-
-# ⚡ Technical Architecture
-
-## Frontend
-- Next.js 14 App Router
-- React
-- TypeScript
-- Tailwind CSS
-
-## Backend
-- Next.js API Routes
-- JWT Authentication
-- Cookie-based Session Security
-- Role-based Authorization
-
-## Database / State Layer
-- Custom In-Memory Relational Engine
-
-## Rendering & Performance
-- requestAnimationFrame optimized canvas rendering
-- hybrid server/client component architecture
-- hardware accelerated animations
-
----
-
-# 🔐 Authentication & Authorization
-
-NEBULA utilizes a secure JWT-based authentication framework featuring:
-
-- encrypted session cookies
-- role-based access control
-- dynamic scholar elevation
-- protected observatory actions
-- secure API route validation
-
----
-
-# 🌌 Astronomy Utilities
-
-The platform provides integrated astronomy-focused systems including:
-
-- telescope optics simulations
-- atmospheric seeing prediction
-- celestial observation archives
-- astrophotography preservation
-- astronomy scholar management
-- equipment logistics
-
----
-
-# 🚀 Local Installation
-
-## Clone Repository
+* Exposure information
+* ISO configuration
+* Telescope instrumentation
+* Long-exposure parameters
+* Observatory records
+
+### Astronomy Seeing Predictor
+
+A custom observation-quality model combining simulated astronomical conditions including:
+
+```text
+Cloud Cover
+Atmospheric Clarity
+Lunar Interference
+Sky Scintillation
+        ↓
+Observation Quality
+        ↓
+Recommended Target Type
+```
+
+The system can distinguish between conditions suitable for deep-sky imaging and conditions where planetary observations are more appropriate.
+
+### Scholar Examination System
+
+NEBULA includes an astronomy qualification workflow for member progression.
+
+Members can progress through:
+
+```text
+NOVICE
+   ↓
+SCHOLAR
+   ↓
+HIGH_PRIEST
+```
+
+Successful examination completion automatically updates the user's role.
+
+This provides a practical example of role-based business logic rather than simple static permissions.
+
+### Galileo AI Assistant
+
+An astronomy-focused conversational assistant designed to answer questions related to:
+
+* Astrophysics
+* Orbital mechanics
+* Relativity
+* Observing techniques
+* Observatory schedules
+* Astronomy concepts
+
+The assistant is integrated into the application as a dedicated astronomy interface.
+
+### Observatory Equipment Reservations
+
+A reservation system for coordinating:
+
+* Telescope sessions
+* Equipment usage
+* Observatory slots
+* Research sessions
+* Multiple telescope configurations
+
+This provides a centralized scheduling layer for observatory activities.
+
+## System Architecture
+
+```text
+                         ┌──────────────────────────┐
+                         │       Next.js App        │
+                         │                          │
+                         │  Server Components       │
+                         │  Client Components       │
+                         │  Interactive Simulators  │
+                         │  Astronomy Dashboard     │
+                         └────────────┬─────────────┘
+                                      │
+                                      ▼
+                         ┌──────────────────────────┐
+                         │      Next.js API         │
+                         │                          │
+                         │  Authentication          │
+                         │  Authorization           │
+                         │  CRUD Operations         │
+                         │  Reservations            │
+                         │  Astronomy Services      │
+                         └────────────┬─────────────┘
+                                      │
+                                      ▼
+                         ┌──────────────────────────┐
+                         │ Custom Relational Store  │
+                         │                          │
+                         │ Users                    │
+                         │ Observations             │
+                         │ Equipment                │
+                         │ Reservations              │
+                         │ Scholar State            │
+                         └──────────────────────────┘
+
+                                      │
+                                      ▼
+                         ┌──────────────────────────┐
+                         │    Astronomy Utilities   │
+                         │                          │
+                         │ Optics Simulation        │
+                         │ Seeing Prediction         │
+                         │ Constellation Rendering  │
+                         │ AI Assistant              │
+                         └──────────────────────────┘
+```
+
+## Technical Architecture
+
+### Frontend
+
+* Next.js 14
+* App Router
+* React
+* TypeScript
+* Tailwind CSS
+* Server Components
+* Client Components
+* HTML5 Canvas
+* `requestAnimationFrame`
+
+### Backend
+
+The backend is implemented using Next.js API routes.
+
+Responsibilities include:
+
+* Authentication
+* Authorization
+* Protected API operations
+* Observation CRUD
+* Equipment management
+* Reservation management
+* Scholar role progression
+* Astronomy-related application logic
+
+### State and Persistence
+
+The current implementation uses a custom in-memory relational engine rather than an external database.
+
+The relational model organizes application state around entities such as:
+
+```text
+User
+ ├── Observations
+ ├── Reservations
+ └── Scholar Status
+
+Equipment
+ └── Reservations
+```
+
+The custom store keeps the project lightweight while providing relational-style application behavior.
+
+## Authentication and Authorization
+
+NEBULA implements JWT-based authentication with cookie-backed sessions.
+
+Security features include:
+
+* JWT authentication
+* HttpOnly session cookies
+* Role-based authorization
+* Protected API routes
+* Server-side authorization checks
+* Dynamic role elevation after examination
+* Restricted observatory operations
+
+Authorization is based on the user's current application role rather than relying solely on client-side UI restrictions.
+
+## Rendering and Performance
+
+The visual layer uses browser-native rendering technologies for interactive astronomical experiences.
+
+The application uses:
+
+* HTML5 Canvas for starfield and constellation rendering
+* `requestAnimationFrame` for animation loops
+* Hardware-accelerated browser rendering
+* Responsive layouts
+* Hybrid server/client rendering
+
+The constellation system dynamically renders connections between stars to create an interactive astronomical background.
+
+## Design System
+
+The interface combines astronomical visualization with a structured application UI.
+
+Key design characteristics include:
+
+* Responsive layouts
+* Glassmorphism panels
+* Celestial gradients
+* Cinzel and Spectral typography
+* Animated starfields
+* Interactive constellation effects
+* Motion-based UI transitions
+* Astronomy-specific visualization components
+
+The visual system is implemented as part of the application rather than relying entirely on static imagery.
+
+## Project Structure
+
+```text
+APS-IIITDMJ-NEBULA-FORUM/
+├── app/
+│   ├── api/                 # Next.js API routes
+│   ├── ...                  # Application pages and layouts
+│
+├── lib/
+│   ├── ...                  # Shared application logic
+│
+├── public/                  # Static assets
+│
+├── package.json
+├── package-lock.json
+├── next.config.js
+├── tsconfig.json
+├── next-env.d.ts
+├── README.md
+│
+├── debug_strip.py
+├── read_log.py
+├── strip_comments.py
+└── strip_comments.js
+```
+
+The current repository is a compact Next.js application with the frontend and backend API layer maintained within the same project.
+
+## Local Development
+
+### Requirements
+
+* Node.js
+* npm
+
+Clone the repository:
 
 ```bash
 git clone https://github.com/nutan654/APS-IIITDMJ-NEBULA-FORUM.git
+cd APS-IIITDMJ-NEBULA-FORUM
 ```
 
----
-
-## Navigate into Project
-
-```bash
-cd nebula-backend
-```
-
----
-
-## Install Dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
 
----
-
-## Start Development Server
+Start the development server:
 
 ```bash
 npm run dev
 ```
 
----
+Open:
 
-## Launch Platform
-
-```bash
+```text
 http://localhost:3000
 ```
 
----
+The current repository's documented development workflow uses Next.js and `npm run dev`.
 
-# 🔑 Fellowship Credentials
+## Deployment
 
-| Rank | Email |
-|------|------|
-| HIGH_PRIEST | admin@nebula.aps |
-| SCHOLAR | arjun@nebula.aps |
-| NOVICE | rohan@nebula.aps |
+The project is structured for deployment as a Next.js application.
 
-### Password
+The repository currently includes a deployed Vercel application linked from GitHub:
+
 ```text
-nebula123
+https://aps-iiitdmj-nebula-forum.vercel.app
 ```
 
----
+## Engineering Highlights
 
-# 🌠 Future Expansion
+### Full-Stack Next.js Architecture
 
-Planned future systems include:
+Frontend rendering and backend API operations are maintained within the same Next.js application, reducing unnecessary service boundaries for a club-scale platform.
 
-- Live ISS Tracking
-- Real-time Sky Mapping
-- AI-powered Astronomy Research Assistant
-- Observatory Analytics Dashboard
-- Deep Space Research Modules
-- Astrophotography Competitions
-- Space Event Management Infrastructure
-- Cosmic Research Archives
+### Role-Based Business Logic
 
----
+Scholar progression is implemented as an application workflow:
 
-# 🛰️ Academic Value
+```text
+Examination
+    ↓
+Validation
+    ↓
+Role Promotion
+    ↓
+Updated Permissions
+```
 
-NEBULA serves as:
-- an educational astronomy platform
-- an observatory management ecosystem
-- a digital astronomy journal
-- a collaborative astrophysics environment
-- a student astronomy research infrastructure
+This makes authorization part of the domain model rather than simply a UI feature.
 
----
+### Interactive Scientific Visualization
 
-# ✨ Creator
+The project uses browser rendering primitives to build astronomy-focused visualizations rather than presenting the application as a collection of static pages.
 
-<div align="center">
+### Domain-Specific Simulation
 
-## Crafted by Nutan ✦
+The eyepiece laboratory models telescope observation parameters such as focal length, magnification, field of view, and Barlow lens configuration.
 
-ECE Student • Frontend Developer • Astronomy Enthusiast
+### Integrated Observatory Workflow
 
-*"Where engineering meets the cosmos."*
+Observation records, equipment reservations, scholar progression, and astronomy utilities are combined into one platform, reflecting the operational workflow of an astronomy society.
 
-</div>
+## Future Improvements
 
----
+Potential extensions include:
 
-<div align="center">
+* Persistent PostgreSQL storage
+* Live ISS tracking
+* Real-time sky maps
+* Advanced astronomy research assistant
+* Observatory analytics
+* Automated astronomical event notifications
+* Advanced astrophotography metadata analysis
+* Research archive management
+* Multi-user observatory collaboration
+* Real astronomical weather API integration
 
-# ✦ Per Aspera Ad Astra ✦
+## Technology Stack
 
-### Through Hardship To The Stars
+| Layer          | Technology                         |
+| -------------- | ----------------------------------- |
+| Framework      | Next.js 14                         |
+| UI             | React                              |
+| Language       | TypeScript                         |
+| Styling        | Tailwind CSS                       |
+| API            | Next.js API Routes                 |
+| Authentication | JWT                                |
+| Sessions       | Cookie-based authentication        |
+| Authorization  | Role-Based Access Control          |
+| State          | Custom in-memory relational engine |
+| Visualization  | HTML5 Canvas                       |
+| Animation      | `requestAnimationFrame`            |
+| AI             | Astronomy assistant integration    |
+| Deployment     | Vercel                             |
 
-</div>
+## Project Goal
+
+NEBULA was built to explore how a specialized web platform can combine software engineering with scientific education.
+
+The goal is not simply to present astronomy content, but to provide an interactive environment where members can:
+
+* Learn
+* Simulate
+* Observe
+* Record
+* Schedule
+* Qualify
+* Explore
+
+within a single astronomy-focused system.
+
+## Author
+
+**Nutan Bisandre**
+
+
+
+[GitHub](https://github.com/nutan654)
